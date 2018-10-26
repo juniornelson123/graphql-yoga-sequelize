@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "junior",
+    "password": "junior123",
+    "database": "studi_on_js_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "junior",
+    "password": "junior123",
+    "database": "studi_on_js_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "junior",
+    "password": "junior123",
+    "database": "studi_on_js_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
