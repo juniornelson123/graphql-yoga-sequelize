@@ -1,0 +1,33 @@
+user
+  sequelize model:generate --name User --attributes avatar:string,name:string,email:string,password:string,status:enum
+
+studio   
+  sequelize model:generate --name Studio --attributes avatar:string,cover:string,name:string,description:text,user_id:integer,value:float,status:enum
+
+band
+  sequelize model:generate --name Band --attributes avatar:string,cover:string,name:string,description:text,user_id:integer,value:float,status:enum
+
+category
+  sequelize model:generate --name Category --attributes name:string
+
+category bands
+
+  sequelize model:generate --name CategoryBands --attributes category_id:integer,band_id:integer
+
+category studios
+  sequelize model:generate --name CategoryStudios --attributes category_id:integer,studio_id:integer
+
+schedule
+  sequelize model:generate --name Schedule --attributes scheduleable:string,scheduleable_id:integer
+
+week
+  sequelize model:generate --name Week --attributes day:string
+
+schedule weeks
+  sequelize model:generate --name ScheduleWeeks  --attributes schedule_id:integer,week_id:integer,initTime:date,endTime:date
+
+event
+  sequelize model:generate --name Event --attributes name:string,description:text,status:enum,initTime:date,endTime:date,value:float,eventable:string,eventable_id:integer,user_id:integer
+
+
+

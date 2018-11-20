@@ -1,26 +1,25 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('User', {
+  const Studio = sequelize.define('Studio', {
     avatar: DataTypes.STRING,
+    cover: DataTypes.STRING,
     name: {
       type: DataTypes.STRING,
       validate: {
         notEmpty: true
       }
     },
-    email: {
-      type: DataTypes.STRING,
+    description: {
+      type: DataTypes.TEXT,
       validate: {
-        notEmpty: true,
-        isEmail: true
+        notEmpty: true
       }
     },
-    password: {
-      type: DataTypes.STRING,
-      validate: {
-        len: [6,20]
-      }
+    user_id: {
+      type: DataTypes.INTEGER,
+    
     },
+    value: DataTypes.FLOAT,
     status: {
       type: DataTypes.ENUM,
       values: ['pending', 'active', 'disable', 'inactive', 'deleted']
@@ -28,10 +27,8 @@ module.exports = (sequelize, DataTypes) => {
       //inactive - admin disable
     }
   }, {});
-  User.associate = function(models) {
-    User.hasMany(models.Band, {
-      foreignKey: 'user_id'
-    })
+  Studio.associate = function(models) {
+    // associations can be defined here
   };
-  return User;
+  return Studio;
 };

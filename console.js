@@ -8,7 +8,7 @@ var models = require('./models')
 var envName = process.env.NODE_ENV || "dev";
 
 var replServer = repl.start({
-  prompt: "SignalLeaf (" + envName + ") > ",
+  prompt: "studiOn (" + envName + ") > ",
 });
 
 // open the repl session

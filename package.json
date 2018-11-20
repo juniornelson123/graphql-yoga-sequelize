@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "console": "babel-node console.js",
     "start": "nodemon --exec babel-node graphql.js --server-only"
   },
   "dependencies": {
